@@ -1,0 +1,9 @@
+{
+    "id": "hide-wikilink-brackets",
+    "name": "Hide Wikilink Brackets",
+    "version": "1.0.0",
+    "minAppVersion": "0.15.0",
+    "description": "在搜索结果中隐藏 wikilink 的括号，只显示链接文本",
+    "author": "Ming",
+    "isDesktopOnly": false
+}
