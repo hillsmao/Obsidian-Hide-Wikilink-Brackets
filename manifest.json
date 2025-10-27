@@ -1,0 +1,9 @@
+{
+    "id": "hide-wikilink-brackets",
+    "name": "Hide Wikilink Brackets",
+    "version": "1.0.0",
+    "minAppVersion": "0.15.0",
+    "description": "Hides wikilink brackets in search results, backlinks, and task lists for a cleaner reading experience.",
+    "author": "Ming",
+    "isDesktopOnly": false
+}
