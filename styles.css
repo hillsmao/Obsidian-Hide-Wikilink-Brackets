@@ -1,0 +1,268 @@
+/* Hide Wikilink Brackets Plugin Styles */
+
+/* ========================================
+   Zoom 插件集成
+   ======================================== */
+
+/* 当启用 Zoom 视图时隐藏正文标题和元数据（避免与面包屑重复） */
+body:has(.zoom-plugin-header) .inline-title {
+    display: none !important;
+}
+
+body:has(.zoom-plugin-header) .metadata-container {
+    display: none !important;
+}
+
+/* 隐藏 Zoom 面包屑中的最后一个标题（正文中已有显示） */
+.zoom-plugin-header .zoom-plugin-title:last-of-type {
+    display: none;
+}
+
+/* 隐藏最后一个分隔符（最后一个标题前的 >> ） */
+.zoom-plugin-header .zoom-plugin-delimiter:last-of-type {
+    display: none;
+}
+
+/* ========================================
+   Roam 风格层级重置（聚焦 bullet 从第一层显示）
+   ======================================== */
+
+/* JavaScript 动态检测第一个可见项的层级，并给 body 添加 zoom-level-N 类名 */
+/* 然后所有列表项都隐藏相同数量的缩进，实现整体向左对齐 */
+
+/* 第 2 层聚焦：所有项隐藏 1 个缩进 */
+body.zoom-level-2 .cm-hmd-list-indent .cm-indent:nth-child(1) {
+    display: none !important;
+}
+
+/* 第 3 层聚焦：所有项隐藏 2 个缩进 */
+body.zoom-level-3 .cm-hmd-list-indent .cm-indent:nth-child(-n+2) {
+    display: none !important;
+}
+
+/* 第 4 层聚焦：所有项隐藏 3 个缩进 */
+body.zoom-level-4 .cm-hmd-list-indent .cm-indent:nth-child(-n+3) {
+    display: none !important;
+}
+
+/* 第 5 层聚焦：所有项隐藏 4 个缩进 */
+body.zoom-level-5 .cm-hmd-list-indent .cm-indent:nth-child(-n+4) {
+    display: none !important;
+}
+
+/* 第 6 层聚焦：所有项隐藏 5 个缩进 */
+body.zoom-level-6 .cm-hmd-list-indent .cm-indent:nth-child(-n+5) {
+    display: none !important;
+}
+
+/* 第 7 层聚焦：所有项隐藏 6 个缩进 */
+body.zoom-level-7 .cm-hmd-list-indent .cm-indent:nth-child(-n+6) {
+    display: none !important;
+}
+
+/* 第 8 层聚焦：所有项隐藏 7 个缩进 */
+body.zoom-level-8 .cm-hmd-list-indent .cm-indent:nth-child(-n+7) {
+    display: none !important;
+}
+
+/* 第 9 层聚焦：所有项隐藏 8 个缩进 */
+body.zoom-level-9 .cm-hmd-list-indent .cm-indent:nth-child(-n+8) {
+    display: none !important;
+}
+
+/* 第 10 层聚焦：所有项隐藏 9 个缩进 */
+body.zoom-level-10 .cm-hmd-list-indent .cm-indent:nth-child(-n+9) {
+    display: none !important;
+}
+
+/* 第 11 层聚焦：所有项隐藏 10 个缩进 */
+body.zoom-level-11 .cm-hmd-list-indent .cm-indent:nth-child(-n+10) {
+    display: none !important;
+}
+
+/* 第 12 层聚焦：所有项隐藏 11 个缩进 */
+body.zoom-level-12 .cm-hmd-list-indent .cm-indent:nth-child(-n+11) {
+    display: none !important;
+}
+
+/* 第 13 层聚焦：所有项隐藏 12 个缩进 */
+body.zoom-level-13 .cm-hmd-list-indent .cm-indent:nth-child(-n+12) {
+    display: none !important;
+}
+
+/* 第 14 层聚焦：所有项隐藏 13 个缩进 */
+body.zoom-level-14 .cm-hmd-list-indent .cm-indent:nth-child(-n+13) {
+    display: none !important;
+}
+
+/* 第 15 层聚焦：所有项隐藏 14 个缩进 */
+body.zoom-level-15 .cm-hmd-list-indent .cm-indent:nth-child(-n+14) {
+    display: none !important;
+}
+
+/* 第 16 层聚焦：所有项隐藏 15 个缩进 */
+body.zoom-level-16 .cm-hmd-list-indent .cm-indent:nth-child(-n+15) {
+    display: none !important;
+}
+
+/* 第 17 层聚焦：所有项隐藏 16 个缩进 */
+body.zoom-level-17 .cm-hmd-list-indent .cm-indent:nth-child(-n+16) {
+    display: none !important;
+}
+
+/* 第 18 层聚焦：所有项隐藏 17 个缩进 */
+body.zoom-level-18 .cm-hmd-list-indent .cm-indent:nth-child(-n+17) {
+    display: none !important;
+}
+
+/* 第 19 层聚焦：所有项隐藏 18 个缩进 */
+body.zoom-level-19 .cm-hmd-list-indent .cm-indent:nth-child(-n+18) {
+    display: none !important;
+}
+
+/* 第 20 层聚焦：所有项隐藏 19 个缩进 */
+body.zoom-level-20 .cm-hmd-list-indent .cm-indent:nth-child(-n+19) {
+    display: none !important;
+}
+
+/* ========================================
+   强制覆盖 element.style 缩进值
+   ======================================== */
+
+/* 聚焦第 2 层：所有层级向左移动一级 */
+body.zoom-level-2 .HyperMD-list-line-2 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-2 .HyperMD-list-line-3 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-2 .HyperMD-list-line-4 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+body.zoom-level-2 .HyperMD-list-line-5 { text-indent: -143px !important; padding-inline-start: 143px !important; }
+body.zoom-level-2 .HyperMD-list-line-6 { text-indent: -179px !important; padding-inline-start: 179px !important; }
+body.zoom-level-2 .HyperMD-list-line-7 { text-indent: -216px !important; padding-inline-start: 216px !important; }
+body.zoom-level-2 .HyperMD-list-line-8 { text-indent: -252px !important; padding-inline-start: 252px !important; }
+body.zoom-level-2 .HyperMD-list-line-9 { text-indent: -289px !important; padding-inline-start: 289px !important; }
+body.zoom-level-2 .HyperMD-list-line-10 { text-indent: -325px !important; padding-inline-start: 325px !important; }
+
+/* 聚焦第 3 层：所有层级向左移动两级 */
+body.zoom-level-3 .HyperMD-list-line-3 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-3 .HyperMD-list-line-4 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-3 .HyperMD-list-line-5 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+body.zoom-level-3 .HyperMD-list-line-6 { text-indent: -143px !important; padding-inline-start: 143px !important; }
+body.zoom-level-3 .HyperMD-list-line-7 { text-indent: -179px !important; padding-inline-start: 179px !important; }
+body.zoom-level-3 .HyperMD-list-line-8 { text-indent: -216px !important; padding-inline-start: 216px !important; }
+body.zoom-level-3 .HyperMD-list-line-9 { text-indent: -252px !important; padding-inline-start: 252px !important; }
+body.zoom-level-3 .HyperMD-list-line-10 { text-indent: -289px !important; padding-inline-start: 289px !important; }
+
+/* 聚焦第 4 层：所有层级向左移动三级 */
+body.zoom-level-4 .HyperMD-list-line-4 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-4 .HyperMD-list-line-5 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-4 .HyperMD-list-line-6 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+body.zoom-level-4 .HyperMD-list-line-7 { text-indent: -143px !important; padding-inline-start: 143px !important; }
+body.zoom-level-4 .HyperMD-list-line-8 { text-indent: -179px !important; padding-inline-start: 179px !important; }
+body.zoom-level-4 .HyperMD-list-line-9 { text-indent: -216px !important; padding-inline-start: 216px !important; }
+body.zoom-level-4 .HyperMD-list-line-10 { text-indent: -252px !important; padding-inline-start: 252px !important; }
+
+/* 聚焦第 5 层：所有层级向左移动四级 */
+body.zoom-level-5 .HyperMD-list-line-5 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-5 .HyperMD-list-line-6 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-5 .HyperMD-list-line-7 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+body.zoom-level-5 .HyperMD-list-line-8 { text-indent: -143px !important; padding-inline-start: 143px !important; }
+body.zoom-level-5 .HyperMD-list-line-9 { text-indent: -179px !important; padding-inline-start: 179px !important; }
+body.zoom-level-5 .HyperMD-list-line-10 { text-indent: -216px !important; padding-inline-start: 216px !important; }
+
+/* 聚焦第 6 层：所有层级向左移动五级 */
+body.zoom-level-6 .HyperMD-list-line-6 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-6 .HyperMD-list-line-7 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-6 .HyperMD-list-line-8 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+body.zoom-level-6 .HyperMD-list-line-9 { text-indent: -143px !important; padding-inline-start: 143px !important; }
+body.zoom-level-6 .HyperMD-list-line-10 { text-indent: -179px !important; padding-inline-start: 179px !important; }
+
+/* 聚焦第 7 层：所有层级向左移动六级 */
+body.zoom-level-7 .HyperMD-list-line-7 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-7 .HyperMD-list-line-8 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-7 .HyperMD-list-line-9 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+body.zoom-level-7 .HyperMD-list-line-10 { text-indent: -143px !important; padding-inline-start: 143px !important; }
+
+/* 聚焦第 8 层：所有层级向左移动七级 */
+body.zoom-level-8 .HyperMD-list-line-8 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-8 .HyperMD-list-line-9 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-8 .HyperMD-list-line-10 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+
+/* 聚焦第 9 层：所有层级向左移动八级 */
+body.zoom-level-9 .HyperMD-list-line-9 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-9 .HyperMD-list-line-10 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+
+/* 聚焦第 10 层：所有层级向左移动九级 */
+body.zoom-level-10 .HyperMD-list-line-10 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+
+/* 聚焦第 11 层：所有层级向左移动十级 */
+body.zoom-level-11 .HyperMD-list-line-11 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-11 .HyperMD-list-line-12 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-11 .HyperMD-list-line-13 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+body.zoom-level-11 .HyperMD-list-line-14 { text-indent: -143px !important; padding-inline-start: 143px !important; }
+body.zoom-level-11 .HyperMD-list-line-15 { text-indent: -179px !important; padding-inline-start: 179px !important; }
+body.zoom-level-11 .HyperMD-list-line-16 { text-indent: -216px !important; padding-inline-start: 216px !important; }
+body.zoom-level-11 .HyperMD-list-line-17 { text-indent: -252px !important; padding-inline-start: 252px !important; }
+body.zoom-level-11 .HyperMD-list-line-18 { text-indent: -289px !important; padding-inline-start: 289px !important; }
+body.zoom-level-11 .HyperMD-list-line-19 { text-indent: -325px !important; padding-inline-start: 325px !important; }
+body.zoom-level-11 .HyperMD-list-line-20 { text-indent: -361px !important; padding-inline-start: 361px !important; }
+
+/* 聚焦第 12 层：所有层级向左移动十一级 */
+body.zoom-level-12 .HyperMD-list-line-12 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-12 .HyperMD-list-line-13 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-12 .HyperMD-list-line-14 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+body.zoom-level-12 .HyperMD-list-line-15 { text-indent: -143px !important; padding-inline-start: 143px !important; }
+body.zoom-level-12 .HyperMD-list-line-16 { text-indent: -179px !important; padding-inline-start: 179px !important; }
+body.zoom-level-12 .HyperMD-list-line-17 { text-indent: -216px !important; padding-inline-start: 216px !important; }
+body.zoom-level-12 .HyperMD-list-line-18 { text-indent: -252px !important; padding-inline-start: 252px !important; }
+body.zoom-level-12 .HyperMD-list-line-19 { text-indent: -289px !important; padding-inline-start: 289px !important; }
+body.zoom-level-12 .HyperMD-list-line-20 { text-indent: -325px !important; padding-inline-start: 325px !important; }
+
+/* 聚焦第 13 层：所有层级向左移动十二级 */
+body.zoom-level-13 .HyperMD-list-line-13 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-13 .HyperMD-list-line-14 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-13 .HyperMD-list-line-15 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+body.zoom-level-13 .HyperMD-list-line-16 { text-indent: -143px !important; padding-inline-start: 143px !important; }
+body.zoom-level-13 .HyperMD-list-line-17 { text-indent: -179px !important; padding-inline-start: 179px !important; }
+body.zoom-level-13 .HyperMD-list-line-18 { text-indent: -216px !important; padding-inline-start: 216px !important; }
+body.zoom-level-13 .HyperMD-list-line-19 { text-indent: -252px !important; padding-inline-start: 252px !important; }
+body.zoom-level-13 .HyperMD-list-line-20 { text-indent: -289px !important; padding-inline-start: 289px !important; }
+
+/* 聚焦第 14 层：所有层级向左移动十三级 */
+body.zoom-level-14 .HyperMD-list-line-14 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-14 .HyperMD-list-line-15 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-14 .HyperMD-list-line-16 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+body.zoom-level-14 .HyperMD-list-line-17 { text-indent: -143px !important; padding-inline-start: 143px !important; }
+body.zoom-level-14 .HyperMD-list-line-18 { text-indent: -179px !important; padding-inline-start: 179px !important; }
+body.zoom-level-14 .HyperMD-list-line-19 { text-indent: -216px !important; padding-inline-start: 216px !important; }
+body.zoom-level-14 .HyperMD-list-line-20 { text-indent: -252px !important; padding-inline-start: 252px !important; }
+
+/* 聚焦第 15 层：所有层级向左移动十四级 */
+body.zoom-level-15 .HyperMD-list-line-15 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-15 .HyperMD-list-line-16 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-15 .HyperMD-list-line-17 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+body.zoom-level-15 .HyperMD-list-line-18 { text-indent: -143px !important; padding-inline-start: 143px !important; }
+body.zoom-level-15 .HyperMD-list-line-19 { text-indent: -179px !important; padding-inline-start: 179px !important; }
+body.zoom-level-15 .HyperMD-list-line-20 { text-indent: -216px !important; padding-inline-start: 216px !important; }
+
+/* 聚焦第 16 层：所有层级向左移动十五级 */
+body.zoom-level-16 .HyperMD-list-line-16 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-16 .HyperMD-list-line-17 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-16 .HyperMD-list-line-18 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+body.zoom-level-16 .HyperMD-list-line-19 { text-indent: -143px !important; padding-inline-start: 143px !important; }
+body.zoom-level-16 .HyperMD-list-line-20 { text-indent: -179px !important; padding-inline-start: 179px !important; }
+
+/* 聚焦第 17 层：所有层级向左移动十六级 */
+body.zoom-level-17 .HyperMD-list-line-17 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-17 .HyperMD-list-line-18 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-17 .HyperMD-list-line-19 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+body.zoom-level-17 .HyperMD-list-line-20 { text-indent: -143px !important; padding-inline-start: 143px !important; }
+
+/* 聚焦第 18 层：所有层级向左移动十七级 */
+body.zoom-level-18 .HyperMD-list-line-18 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-18 .HyperMD-list-line-19 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+body.zoom-level-18 .HyperMD-list-line-20 { text-indent: -106px !important; padding-inline-start: 106px !important; }
+
+/* 聚焦第 19 层：所有层级向左移动十八级 */
+body.zoom-level-19 .HyperMD-list-line-19 { text-indent: -33px !important; padding-inline-start: 33px !important; }
+body.zoom-level-19 .HyperMD-list-line-20 { text-indent: -70px !important; padding-inline-start: 70px !important; }
+
+/* 聚焦第 20 层：所有层级向左移动十九级 */
+body.zoom-level-20 .HyperMD-list-line-20 { text-indent: -33px !important; padding-inline-start: 33px !important; }
